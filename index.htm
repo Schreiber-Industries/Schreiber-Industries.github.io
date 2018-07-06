@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schreiber Industries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  
+  </head>
+  <body>
+ <div class="navbar">
+    <div class="logo"><img src="logo.png" height="40px"></div>
+    <div class="logo"><img src="logo2.png" height="40px"></div>
+  <ul>
+    <li><a href="default.asp">Who We Are</a></li>
+    <li><a href="news.asp">What We Do</a></li>
+    <li><a href="contact.asp">Services</a></li>
+    <li><a href="about.asp">Clients</a></li>
+    <li><a href="about.asp">Contact</a></li>
+  </ul>
+  </div>
+  <!-- Slideshow container -->
+  <br><br><br>
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="dev.jpeg" style="width:100%">
+      <div class="text">Web and Custom Software Development</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="netpc.jpg" style="width:100%">
+      <div class="text">Networking and PC Repair</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="support.jpeg" style="width:100%">
+        <div class="text">Hosting and Support</div>
+      </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="mgt.jpeg" style="width:100%">
+      <div class="text">Management and Operations Consulting</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  </div>
+  <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 10000); // Change image every 2 seconds
+}
+carousel();
+      </script>
+<!-- after -->
+
+<h1 style="text-align: center;">Welcome to Schreiber Industries</h1>
+<div style="text-align: center;">
+<p>Bespoke, contemporary software development and web design, and networking services for a wide range of businesses - corporate<br />websites, 
+  small business networking, or robust mutli-tier client/server applications – individually designed to your brief,<br>All backed up by the world-leading technologies.
+  Contact us to discuss your project or for a quote.</p></div>
+  <br>
+<div class="four"><img src="977421.svg" height="150px"><br><br><div style="font-size: 20px">Networking and PC Repair</div><br></div>
+<div class="four"><img src="977604.svg" height="150px"><br><br><div style="font-size: 20px">Software and Web Development</div><br>With years of experience in bespoke software development we can deliver top functionality and provide a perfect solution for your Company.</div>
+<div class="four"><img src="977624.svg" height="150px"><br><br><div style="font-size: 20px">Hosting and Support</div><br></div>
+<div class="four"><img src="993538.svg" height="150px"><br><br><div style="font-size: 20px">Management Consulting</div><br></div>
+<br>
+  </body>
+</html>
