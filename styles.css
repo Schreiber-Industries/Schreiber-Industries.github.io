@@ -101,3 +101,34 @@ textarea {
 input {
     width: 100%;  
 }
+
+.pricediv {
+    width: 100%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+.pricediv td, .pricedivth {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.pricediv tr:nth-child(even){background-color: #f2f2f2;}
+
+.pricediv tr:hover {background-color: #ddd;}
+
+.pricediv th {
+    padding: 9px;
+    text-align: left;
+    background-color: #00aeef;
+    color: white;
+}
+
+#techicons {
+    text-align: center;
+}
+
+#techicons img {
+    padding:1%;
+    width: 5%;
+}
